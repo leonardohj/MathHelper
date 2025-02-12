@@ -22,7 +22,7 @@ public class MathHelper {
         System.out.println("+  \\ /  +                                   +  \\ /  +");
         System.out.println("+   X   + <6> Juntar nome e apelido         +   X   +");
         System.out.println("+  / \\  +                                   +  / \\  +");
-        System.out.println("+ /   \\ + <7> Maior numero                  + /   \\ +");
+        System.out.println("+ /   \\ + <7> Maior número                  + /   \\ +");
         System.out.println("+/     \\+                                   +/     \\+");
         System.out.println("+-------+ <8> Média dos números             +-------+");
         System.out.println("+-------+                                   +-------+");
@@ -60,7 +60,7 @@ public class MathHelper {
 
     public static void InserirNumeros(Scanner scanner, int quantosNumeros, int[] numeros)
     {
-        System.out.println("\nOk! Insira os " + quantosNumeros + " numeros.");
+        System.out.println("\nOk! Insira os " + quantosNumeros + " números.");
         for(int i = 0; i < quantosNumeros; i++)
         {
             numeros[i] = scanner.nextInt();
@@ -69,7 +69,7 @@ public class MathHelper {
 
     public static void InserirNumerosDouble(Scanner scanner, int quantosNumeros, double[] numerosDouble)
     {
-        System.out.println("\nOk! Insira os " + quantosNumeros + " numeros.");
+        System.out.println("\nOk! Insira os " + quantosNumeros + " números.");
         for(int i = 0; i < quantosNumeros; i++)
         {
             numerosDouble[i] = scanner.nextDouble();
@@ -95,7 +95,7 @@ public class MathHelper {
     {
         if(numeros[0] == 0 || numeros[1] == 0)
         {
-            System.out.println("Não podes dividir numeros por zero!");
+            System.out.println("Não podes dividir números por zero!");
             return 0;
         }
         return numeros[0] / numeros[1];

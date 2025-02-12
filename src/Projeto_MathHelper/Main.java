@@ -26,29 +26,29 @@ public class Main {
                 System.out.println("\nObrigada por usar o meu programa!");
                 break;
             case 1:
-                System.out.println("\nQuantos numeros quer somar?");
+                System.out.println("\nQuantos números quer somar?");
                 quantosNumeros = scanner.nextInt();
                 if(quantosNumeros <= 1)
                 {
-                    System.out.println("Não podes somar só 1 numero...");
+                    System.out.println("Não podes somar só 1 número...");
                 }
                 else
                 {
                     MathHelper.InserirNumeros(scanner, quantosNumeros, numeros);
-                    System.out.println("\nA soma dos numeros inseridos foi: " + MathHelper.soma(numeros, quantosNumeros) + "!");
+                    System.out.println("\nA soma dos números inseridos foi: " + MathHelper.soma(numeros, quantosNumeros) + "!");
                 }
                 voltar = MathHelper.VoltarAoMenu(scanner);
                 break;
             case 2:
                 quantosNumeros = 2;
                 MathHelper.InserirNumeros(scanner, quantosNumeros, numeros);
-                System.out.println("\nA subtração dos numeros inseridos foi: " + MathHelper.subtracao(numeros) + "!");
+                System.out.println("\nA subtração dos números inseridos foi: " + MathHelper.subtracao(numeros) + "!");
                 voltar = MathHelper.VoltarAoMenu(scanner);
                 break;
             case 3:
                 quantosNumeros = 2;
                 MathHelper.InserirNumeros(scanner, quantosNumeros, numeros);
-                System.out.println("\nA multiplicação dos numeros inseridos foi: " + MathHelper.multiplicacao(numeros) + "!");
+                System.out.println("\nA multiplicação dos números inseridos foi: " + MathHelper.multiplicacao(numeros) + "!");
                 voltar = MathHelper.VoltarAoMenu(scanner);
                 break;
             case 4:
@@ -57,18 +57,18 @@ public class Main {
                 double divisaofeita = MathHelper.divisao(numerosDouble);
                 if(divisaofeita == 0)
                 {
-                    System.out.println("Erro! Os numeros inseridos não podem ser divididos!");
+                    System.out.println("Erro! Os números inseridos não podem ser divididos!");
                 }
                 else
                 {
-                    System.out.println("\nA divisão dos numeros inseridos foi: " + MathHelper.divisao(numerosDouble) + "!");
+                    System.out.println("\nA divisão dos números inseridos foi: " + MathHelper.divisao(numerosDouble) + "!");
                 }
                 voltar = MathHelper.VoltarAoMenu(scanner);
                 break;
             case 5:
                 System.out.println("\nQual é o número que quer inserir?");
                 numero = scanner.nextInt();
-                System.out.println("O numero a seguir ao numero " + numero + " é " + MathHelper.numeroSeguinte(numero) + "!");
+                System.out.println("O número a seguir ao número " + numero + " é " + MathHelper.numeroSeguinte(numero) + "!");
                 voltar = MathHelper.VoltarAoMenu(scanner);
                 break;
             case 6:
@@ -80,17 +80,17 @@ public class Main {
                 voltar = MathHelper.VoltarAoMenu(scanner);
                 break;
             case 7:
-                System.out.println("\nQuer inserir quantos numeros? (Max 50)");
+                System.out.println("\nQuer inserir quantos números? (Max 50)");
                 quantosNumeros = scanner.nextInt();
                 MathHelper.InserirNumeros(scanner, quantosNumeros, numeros);
-                System.out.println("\nO maior numero que foi inserido é o: " + MathHelper.maior(numeros, quantosNumeros) + "!");
+                System.out.println("\nO maior número que foi inserido é o: " + MathHelper.maior(numeros, quantosNumeros) + "!");
                 voltar = MathHelper.VoltarAoMenu(scanner);
                 break;
             case 8:
-                System.out.println("\nQuer inserir quantos numeros? (Max 50)");
+                System.out.println("\nQuer inserir quantos números? (Max 50)");
                 quantosNumeros = scanner.nextInt();
                 MathHelper.InserirNumerosDouble(scanner, quantosNumeros, numerosDouble);
-                System.out.println("\nA média dos numeros inseridos é: " + MathHelper.media(numerosDouble, quantosNumeros) + "!");
+                System.out.println("\nA média dos números inseridos é: " + MathHelper.media(numerosDouble, quantosNumeros) + "!");
                 voltar = MathHelper.VoltarAoMenu(scanner);
                 break;
             default:
