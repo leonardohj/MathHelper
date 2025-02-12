@@ -12,7 +12,7 @@ public class Main {
     double[] numerosDouble = new double[50];
     int quantosNumeros;
     String nome, apelido;
-    int menu;
+    String menu;
         boolean voltar = true;
     do {
 
@@ -22,10 +22,10 @@ public class Main {
         }
         menu = MathHelper.Menu(scanner);
         switch (menu) {
-            case 0:
+            case "0":
                 System.out.println("\nObrigada por usar o meu programa!");
                 break;
-            case 1:
+            case "1":
                 System.out.println("\nQuantos números quer somar?");
                 quantosNumeros = scanner.nextInt();
                 if(quantosNumeros <= 1)
@@ -39,19 +39,19 @@ public class Main {
                 }
                 voltar = MathHelper.VoltarAoMenu(scanner);
                 break;
-            case 2:
+            case "2":
                 quantosNumeros = 2;
                 MathHelper.InserirNumeros(scanner, quantosNumeros, numeros);
                 System.out.println("\nA subtração dos números inseridos foi: " + MathHelper.subtracao(numeros) + "!");
                 voltar = MathHelper.VoltarAoMenu(scanner);
                 break;
-            case 3:
+            case "3":
                 quantosNumeros = 2;
                 MathHelper.InserirNumeros(scanner, quantosNumeros, numeros);
                 System.out.println("\nA multiplicação dos números inseridos foi: " + MathHelper.multiplicacao(numeros) + "!");
                 voltar = MathHelper.VoltarAoMenu(scanner);
                 break;
-            case 4:
+            case "4":
                 quantosNumeros = 2;
                 MathHelper.InserirNumerosDouble(scanner, quantosNumeros, numerosDouble);
                 double divisaofeita = MathHelper.divisao(numerosDouble);
@@ -65,13 +65,13 @@ public class Main {
                 }
                 voltar = MathHelper.VoltarAoMenu(scanner);
                 break;
-            case 5:
+            case "5":
                 System.out.println("\nQual é o número que quer inserir?");
                 numero = scanner.nextInt();
                 System.out.println("O número a seguir ao número " + numero + " é " + MathHelper.numeroSeguinte(numero) + "!");
                 voltar = MathHelper.VoltarAoMenu(scanner);
                 break;
-            case 6:
+            case "6":
                 System.out.println("\nInsira o nome!");
                 nome = scanner.next();
                 System.out.println("Insira o apelido");
@@ -79,14 +79,14 @@ public class Main {
                 System.out.println("O nome junto fica: " + MathHelper.juntarNome(nome, apelido));
                 voltar = MathHelper.VoltarAoMenu(scanner);
                 break;
-            case 7:
+            case "7":
                 System.out.println("\nQuer inserir quantos números? (Max 50)");
                 quantosNumeros = scanner.nextInt();
                 MathHelper.InserirNumeros(scanner, quantosNumeros, numeros);
                 System.out.println("\nO maior número que foi inserido é o: " + MathHelper.maior(numeros, quantosNumeros) + "!");
                 voltar = MathHelper.VoltarAoMenu(scanner);
                 break;
-            case 8:
+            case "8":
                 System.out.println("\nQuer inserir quantos números? (Max 50)");
                 quantosNumeros = scanner.nextInt();
                 MathHelper.InserirNumerosDouble(scanner, quantosNumeros, numerosDouble);
@@ -98,6 +98,6 @@ public class Main {
                 voltar = MathHelper.VoltarAoMenu(scanner);
                 break;
         }
-    }while(menu != 0);
+    }while(!menu.equals("0"));
     }
 }

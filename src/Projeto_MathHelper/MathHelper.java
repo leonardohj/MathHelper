@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MathHelper {
 
-    public static int Menu(Scanner scanner)
+    public static String Menu(Scanner scanner)
     {
         System.out.println("+-------+-----------------------------------+-------+");
         System.out.println("+\\     /+            Math Helper            +\\     /+");
@@ -30,7 +30,7 @@ public class MathHelper {
         System.out.println("+\\\\\\\\\\\\\\\\___________________________________////////+");
         System.out.println("+-------+-----------------------------------+-------+\n");
 
-        int menu = scanner.nextInt();
+        String menu = scanner.next();
         return menu;
     }
 
@@ -136,6 +136,7 @@ public class MathHelper {
     for(int i = 0; i < quantosNumeros; i++)
     {
         soma += numeros[i];
+        soma = soma + numeros[i];
     }
     return soma;
     }
